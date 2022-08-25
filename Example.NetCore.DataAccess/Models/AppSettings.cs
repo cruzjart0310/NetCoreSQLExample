@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example.NetCore.DataAccess.Models
+{
+    public class AppSettings
+    {
+        public ConnectionStrings ConnectionStrings { get; set; }
+    }
+}
