@@ -2,11 +2,6 @@
 using Example.NetCore.DataAccess.Contracts;
 using Example.NetCore.DataAccess.Entities;
 using Example.NetCore.DataAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Example.NetCore.DataAccess.Repositories
 {

@@ -18,15 +18,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-
-
 builder.Services.AddTransient<ISurveyRepository, SurveyRepository>();
-
 //builder.Services.AddTransient<IDataAccess, IDataAccess>();
-
-RegisterAssembly("Example.NetCore.DataAccess", builder.Services);
-
-
+//RegisterAssembly("Example.NetCore.DataAccess", builder.Services);
 builder.Services.Configure<AppSettings>(configuration)
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<AppSettings>>().Value);
 

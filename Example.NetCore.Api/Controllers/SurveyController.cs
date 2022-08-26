@@ -16,10 +16,7 @@ namespace Example.NetCore.Api.Controllers
             _surveyRepository = surveyRepository;
         }
 
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet]
         public async Task<IActionResult> Index([FromQuery] Pagination paginationDto)
         {
@@ -31,8 +28,6 @@ namespace Example.NetCore.Api.Controllers
         }
 
         [ProducesResponseType(StatusCodes.Status201Created)] //, Type = typeof(SurveyDto)
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Survey SurveyDto)
@@ -42,10 +37,7 @@ namespace Example.NetCore.Api.Controllers
             return Ok(survey);
         }
 
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSurvey(int id)
         {
